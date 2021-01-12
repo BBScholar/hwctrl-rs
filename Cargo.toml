@@ -12,6 +12,7 @@ rosrust_msg = "0.1"
 env_logger = ""
 gpio = "0.4"
 socketcan = "1.7"
+spidev = "0.3"
 
 [profile.release]
 debug-assertions = false

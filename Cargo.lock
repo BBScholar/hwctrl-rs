@@ -122,6 +122,12 @@ checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 
 [[package]]
 name = "bitflags"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "32866f4d103c4e438b1db1158aa1b1a80ee078e5d77a59a2f906fd62a577389c"
+
+[[package]]
+name = "bitflags"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8dead7461c1127cf637931a1e50934eb6eee8bff2f74433ac7909e9afcee04a3"
@@ -553,6 +559,7 @@ dependencies = [
  "rosrust",
  "rosrust_msg",
  "socketcan",
+ "spidev",
 ]
 
 [[package]]
@@ -745,6 +752,20 @@ checksum = "bfb3ddedaa14746434a02041940495bf11325c22f6d36125d3bdd56090d50a79"
 dependencies = [
  "bitflags 0.4.0",
  "libc",
+]
+
+[[package]]
+name = "nix"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7a7bb1da2be7da3cbffda73fc681d509ffd9e665af478d2bee1907cee0bc64b2"
+dependencies = [
+ "bitflags 0.4.0",
+ "cfg-if 0.1.10",
+ "libc",
+ "rustc_version",
+ "semver",
+ "void",
 ]
 
 [[package]]
@@ -1181,6 +1202,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e3bad0ee36814ca07d7968269dd4b7ec89ec2da10c4bb613928d3077083c232"
 
 [[package]]
+name = "rustc_version"
+version = "0.1.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c5f5376ea5e30ce23c03eb77cbe4962b988deead10910c372b226388b594c084"
+dependencies = [
+ "semver",
+]
+
+[[package]]
 name = "ryu"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1203,6 +1233,12 @@ name = "scopeguard"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d29ab0c6d3fc0ee92fe66e2d99f700eab17a8d57d1c1d3b748380fb20baa78cd"
+
+[[package]]
+name = "semver"
+version = "0.1.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d4f410fedcf71af0345d7607d246e7ad15faaadd49d240ee3b24e5dc21a820ac"
 
 [[package]]
 name = "serde"
@@ -1275,6 +1311,17 @@ dependencies = [
  "libc",
  "nix 0.5.1",
  "try_from",
+]
+
+[[package]]
+name = "spidev"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1ba01d3ef92a37e898fecac76cd3e1b33c999395e2d70787608d9678c4293e04"
+dependencies = [
+ "bitflags 0.3.3",
+ "libc",
+ "nix 0.6.0",
 ]
 
 [[package]]
